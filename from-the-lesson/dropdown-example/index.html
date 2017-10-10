@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Select</title>
+
+	<style>
+	 	* {
+	 		margin: 0;
+	 		padding: 0;
+	 		box-sizing: border-box;
+	 	}
+	 	html, body {
+	 		width: 100%;
+	 		height: 100%;
+	 	}
+	 	body {
+	 		display: flex;
+	 		justify-content: center;
+	 		align-items: center;
+	 	}
+		input, li label, li label + span { display: none; }
+
+		ul {
+			display: inline-block;
+			position: relative;
+			border: 2px solid #eee;
+			border-bottom: none;
+		}
+		li {
+			display: block;
+		}
+		ul:before {
+			content: '';
+			display: block;
+			width: 200px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			color: #999;
+			border-bottom: 2px solid #eee;
+		}
+		ul:after {
+			content: '>';
+			display: block;
+			position: absolute;
+			right: -43px;
+			top: -2px;
+			border: 2px solid #eee;
+			padding: 0px 15px;
+			color: #aaa;
+			transition: .3s;
+		}
+		label {
+			display: block;
+			width: 200px;
+			height: 40px;
+			line-height: 40px;
+			padding: 0px 10px;
+		}
+		input:checked + li > label {
+			background-color: #eee;
+		}
+		input:checked + li > label + span {
+			display: block;
+			position: absolute;
+			top: 0;
+			width: 200px;
+			height: 40px;
+			line-height: 40px;
+			padding-left: 15px;
+		}
+		input[type="checkbox"]:checked + ul {
+			border-bottom: 2px solid #eee;
+		}
+		input[type="checkbox"]:checked + ul li label {
+			display: block;
+		}
+		input[type="checkbox"]:checked + ul:after {
+			transform: rotate(90deg);
+		}
+		body > label {
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	
+	
+	<label>
+		<input type="checkbox">
+		<ul>
+			<input type="radio" name="select" id="select[1]">
+			<li>
+				<label for="select[1]">Значение 1</label>
+				<span>Значение 1</span>
+			</li>
+			<input type="radio" name="select" id="select[2]">
+			<li>
+				<label for="select[2]">Значение 2</label>
+				<span>Значение 2</span>
+			</li>
+			<input type="radio" name="select" id="select[3]">
+			<li>
+				<label for="select[3]">Значение 3</label>
+				<span>Значение 3</span>
+			</li>
+			<input type="radio" name="select" id="select[4]">
+			<li>
+				<label for="select[4]">Значение 4</label>
+				<span>Значение 4</span>
+			</li>
+			<input type="radio" name="select" id="select[5]">
+			<li>
+				<label for="select[5]">Значение 5</label>
+				<span>Значение 5</span>
+			</li>
+		</ul>
+	</label>
+
+</body>
+</html>
